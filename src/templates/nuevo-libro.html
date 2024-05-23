@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+
+{% block title %} Nuevo libro {% endblock %}
+
+{% block body %}
+
+<h1>NUEVO LIBRO</h1>
+<br>
+<br>
+<form class="row row-cols-lg-2 g-3 align-items-center" action="{{url_for('leyendo')}}" method="post">
+    <div class="col-12">
+      <label class="visually-hidden" for="booktitle">booktitle</label>
+      <div class="input-group">
+        <div class="input-group-text">TÍTULO</div>
+        <input  type="text" class="form-control" id="booktitle" name="book-title"
+                placeholder="título del libro"" required="required">
+      </div>
+    </div>
+  
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Registrar libro</button>
+    </div>
+</form>
+
+
+{% endblock %}
