@@ -4,10 +4,10 @@
 
 {% block body %}
 
-<h1>NUEVO LIBRO</h1>
+<h1>[+] NUEVO LIBRO</h1>
 <br>
 <br>
-<form class="row row-cols-lg-2 g-3 align-items-center" action="{{url_for('leyendo')}}" method="post">
+<form class="row row-cols-lg-2 g-3 align-items-center" action="{{url_for('agregar_libro')}}" method="post">
     <div class="col-12">
       <label class="visually-hidden" for="booktitle">booktitle</label>
       <div class="input-group">
@@ -20,6 +20,10 @@
     <div class="col-12">
       <button type="submit" class="btn btn-primary">Registrar libro</button>
     </div>
+
+    <br>
+    <br>
+    {{ resultado }}
 </form>
 
 
